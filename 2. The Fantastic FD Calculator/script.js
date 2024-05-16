@@ -1,25 +1,35 @@
-const principle_amount = document.getElementById('principle_amount');
-const interest_rate = document.getElementById('interest_rate');
-const years = document.getElementById('years');
-const calculate_btn = document.getElementById('calculate');
-const maturity_amount = document.getElementById('maturity_amount');
+const principle = document.getElementById('principle');
+const interest_rate = document.getElementById('interestRate');
+const tenure = document.getElementById('tenure');
+const calculate = document.getElementById('calculate');
+const display_result = document.getElementById('result');
 
-function calculateMaturityAmount(principleAmount, interestRate, tenureYears) {
-    return principleAmount * (principleAmount * interestRate * tenureYears) / 100;
+function isInvalid(amount) {
+    return Number.isNaN(amount) || amount === '' || amount === null;
 }
 
-const showMaturityAmount = (maturityAmount) => {
-    maturity_amount.textContent = maturityAmount.toFixed(2);
+function getMaturitryAmount(principleAmount, interestRate, tenureYears) {
+    return principleAmount * (principleAmount * interestRate * tenureYears) / 100.00;
 }
 
-const calculate = (event) => {
-    const principleAmount = parseFloat(principle_amount.value);
+function showResult(result) {
+    display_result.innerText = `Maturity Amount: ${result.toFixed(2)}`;
+}
+
+function calculateMaturityAmount() {
+    // Get input values from the form elements
+    const principleAmount = parseFloat(principle.value);
     const interestRate = parseFloat(interest_rate.value);
-    const tenureYears = parseFloat(years.value);
+    const tenureYears = parseFloat(tenure.value);
 
-    const maturityAmount = calculateMaturityAmount(principleAmount, interestRate, tenureYears);
-
-    showMaturityAmount(maturityAmount);
+    if (isInvalid(principleAmount) || isInvalid(interestRate) || isInvalid(tenureYears)) {
+        alert('Invalid Input');
+        principle.focus();
+    } else {
+        const maturityAmount = getMaturitryAmount(principleAmount, interestRate, tenureYears);
+        showResult(maturityAmount);
+    }
 }
 
-calculate_btn.addEventListener('click', calculate);
+principle.focus();
+calculate.addEventListener('click', calculateMaturityAmount);
