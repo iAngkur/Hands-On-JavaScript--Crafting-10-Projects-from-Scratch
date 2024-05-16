@@ -18,8 +18,8 @@ addTodoBtn.addEventListener('click', () => {
 
         newToDoItem.appendChild(deleteTodoBtn);
         todoList.appendChild(newToDoItem);
-
-        newTodoInput.value = '';
-        newTodoInput.focus();
     }
+
+    newTodoInput.value = '';
+    newTodoInput.focus();
 });
