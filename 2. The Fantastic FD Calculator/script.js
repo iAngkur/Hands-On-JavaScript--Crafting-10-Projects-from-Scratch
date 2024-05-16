@@ -9,7 +9,7 @@ function isInvalid(amount) {
 }
 
 function getMaturitryAmount(principleAmount, interestRate, tenureYears) {
-    return principleAmount * (principleAmount * interestRate * tenureYears) / 100.00;
+    return principleAmount + (principleAmount * interestRate * tenureYears) / 100.00;
 }
 
 function showResult(result) {
