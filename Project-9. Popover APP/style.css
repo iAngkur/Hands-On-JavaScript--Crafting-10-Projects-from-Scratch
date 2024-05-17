@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#popover {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+button {
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+.close_btn {
+    padding: 5px 10px;
+}
