@@ -1,0 +1,73 @@
+body {
+    background-color: #f2f2f2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+.expense_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.expense_header>button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #4caf50;
+    font-size: 1rem;
+    font-weight: 600;
+    color: beige;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+.expense_header>button:hover {
+    background-color: #317001;
+}
+
+
+.expense_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.expense_item_description {
+    font-weight: bold;
+}
+
+.expense_item_amount {
+    font-weight: bold;
+}
+
+.expense_item_remove {
+    background-color: #f44336;
+    border: none;
+    border-radius: 50%;
+    color: beige;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.total_expense {
+    text-align: right;
+}
